@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+
+        <table>
+            {% if login_form %}
+                {{login_form.as_table}}
+            {% endif %}
+        </table>
+        <input type="submit" value="Log in">
+    </form>
+{% endblock content %}
